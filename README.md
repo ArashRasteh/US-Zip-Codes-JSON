@@ -1,4 +1,5 @@
-# List of all US Zip codes in JSON format. Includes Latitude, Longitude, City, State, County, and of course, Zip Code.
+# List of all US Zip codes in JSON format. 
+### Includes Latitude, Longitude, City, State, County, and of course, Zip Code.
 
 USCities.json - All information - 7,330,359 bytes<br />
 USCities.min.json - Minified version with all information and tags untouched - 4,851,378 bytes<br />
