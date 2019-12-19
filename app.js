@@ -11,6 +11,7 @@ const file = JSON.parse(fileBuffer);
 
 let fileTable = [["zip", "lat", "long", "city", "state", "county"]];
 
+//Create a nested array from the json file
 for (let i = 0; i < file.length; i++) {
    fileTable[i+1] = [];
    fileTable[i+1][0] = file[i].zip_code;
@@ -22,7 +23,7 @@ for (let i = 0; i < file.length; i++) {
 
 }
 
-
+// This section can be used to delete unwanted Object properties, also can be used to abbreviate the property keys to save space on the file.
 // for (let i = 0; i < file.length; i++) {
 //    file[i].la = file[i].latitude;
 //    delete file[i].latitude;
@@ -44,6 +45,7 @@ for (let i = 0; i < file.length; i++) {
 
 // }
 
+//Used to divide up the zip codes by every 10000 possible zipcode
 let previousSliceEnd = 1;
 for (let j = 0; j < 10; j++) {
    let zipCodeDivider = (j === 0) ? "00000" : j * 10000;
